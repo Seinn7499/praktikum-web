@@ -4,7 +4,7 @@
 <body>
 <h1>{{ $buku->exists ? 'Ubah Buku' : 'Tambah Buku' }}</h1>
 <form method="POST" action="{{ $buku->exists ? route('buku.update', $buku) : route('buku.store') }}">
-    @csrf
+    <!--@csrf
     @if ($buku->exists) @method('PUT') @endif
     <p>Kode <input name="kode" value="{{ old('kode', $buku->kode) }}"></p>
     <p>Judul <input name="judul" value="{{ old('judul', $buku->judul) }}"></p>
@@ -16,7 +16,7 @@
         </select>
     </p>
     @foreach ($errors->all() as $pesan) <p>{{ $pesan }}</p> @endforeach
-    <button type="submit">Simpan</button>
+    <button type="submit">Simpan</button>-->
 </form>
 <p><a href="{{ route('buku.index') }}">Kembali</a></p>
 </body>
